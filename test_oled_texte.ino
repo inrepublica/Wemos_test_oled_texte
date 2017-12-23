@@ -43,7 +43,7 @@ void loop() {
   Serial.print(" %  ");
   Serial.print("Temperature: ");
   Serial.print(t);
-  Serial.println(" *C");
+  Serial.println("\xA7");
 
   // Effacer l'écran
   display.clearDisplay();
