@@ -38,13 +38,11 @@ void loop() {
     Serial.println("Impossible de lire la sonde DHT!");
     return;
   }
-  Serial.print("Humidity: ");
-  Serial.print(h);
-  Serial.print(" %  ");
-  Serial.print("Temperature: ");
-  Serial.print(t);
-  Serial.println("\xA7");
 
+  // Affichage sur le port série
+  Serial.print("Humidity: ");Serial.print(h);Serial.print(" %  ");
+  Serial.print("Temperature: ");Serial.print(t);Serial.println("°");
+  
   // Effacer l'écran
   display.clearDisplay();
   
@@ -60,6 +58,6 @@ void loop() {
   display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,47);
-  display.print(t);display.print("\xA7");display.print(" ");display.print(h);display.print("%");
+  display.print(t);display.print("\xB0");display.print(" ");display.print(h);display.print("%");
   display.display();
 }
